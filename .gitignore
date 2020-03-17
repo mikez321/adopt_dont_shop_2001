@@ -20,4 +20,5 @@
 
 #Ignore simplecov coverage files
 
- coverage
+coverage
+coverage/*
