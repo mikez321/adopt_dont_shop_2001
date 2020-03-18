@@ -13,7 +13,7 @@ RSpec.describe "shelter index page", type: :feature do
                                state: "CA",
                                zip: "90210")
 
-    visit "/index"
+    visit "/"
 
     expect(page).to have_content(shelter_1.name)
     expect(page).to have_content(shelter_2.name)
