@@ -16,6 +16,9 @@ RSpec.describe 'update shelter' do
 
       expect(current_path).to eq("/shelters/#{shelter.id}/")
       expect(page).to have_content('New Heights Bird Rescue')
+      #This was meg's advice so check it out...
+      shelter.reload
+      expect(shelter.name).to eq('New Heights Bird Rescue')
     end
   end
 end
