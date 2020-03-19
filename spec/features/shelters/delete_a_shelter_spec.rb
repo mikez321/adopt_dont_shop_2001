@@ -12,7 +12,7 @@ RSpec.describe "As a visitor when I visit a shelter page" do
 
       visit "/shelters/#{animal_shelter.id}"
 
-      click_button 'Delete'
+      click_link 'Delete Shelter'
 
       expect(current_path).to eq("/")
       expect(page).to_not have_content(animal_shelter.name)
