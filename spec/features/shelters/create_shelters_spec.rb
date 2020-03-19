@@ -6,7 +6,7 @@ RSpec.describe 'new shelter page' do
 
       visit '/'
 
-      click_link 'click here'
+      click_link 'new shelter'
 
       expect(current_path).to eq('/shelters/new')
 
@@ -18,7 +18,7 @@ RSpec.describe 'new shelter page' do
       click_on 'Submit'
 
       expect(current_path).to eq("/")
-      
+
       expect(page).to have_content('The Dog Rescuerer')
 
 
