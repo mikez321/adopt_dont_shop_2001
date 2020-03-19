@@ -1,6 +1,6 @@
 <h1>Our Pets</h1>
 <% @pets.each do |pet| %>
-  <%= pet.name %>
-  <%= pet.age %>
-  <%= pet.sex %>
+  <h2><%= pet.name %></h2>
+  <p>Age:<%= pet.age %></p>
+  <p><%= pet.sex %></p>
 <% end %>
