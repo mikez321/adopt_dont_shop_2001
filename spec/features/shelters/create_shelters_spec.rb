@@ -15,7 +15,7 @@ RSpec.describe 'new shelter page' do
       fill_in 'city', with: "Denver"
       fill_in 'state', with: "CO"
       fill_in 'zip', with: "80232"
-      click_on 'Submit'
+      click_on 'Create Shelter'
 
       expect(current_path).to eq("/")
 
