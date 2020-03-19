@@ -1,30 +1,21 @@
-# require 'rails_helper'
-# RSpec.describe 'update shelter page' do
-#   it 'user can update shelter info' do
-#
-#     visit '/'
-#
-#     click_link 'click here'
-#
-#     fill_in 'name', with: "The Dog Rescuerer"
-#     fill_in 'address', with: "1234 Floor"
-#     fill_in 'city', with: "Denver"
-#     fill_in 'state', with: "CO"
-#     fill_in 'zip', with: "80232"
-#
-#     click_on 'Submit'
-#
-#     expect(current_path).to eq("/")
-#
-#     click_link 'click_here'
-#
-#     click_on 'Update'
-#
-#     fill_in 'name', with: "El Doggo de los memes"
-#
-#     click_on 'Update'
-#
-#     expect(page).to have_content("El Doggo de los memes")
-#
-#   end
-# end
+require 'rails_helper'
+
+RSpec.describe 'update shelter' do
+  describe 'as a visitor when i visit a show page' do
+    it 'i can edit the shelter information' do
+      shelter = Shelter.create(name: 'Bird Savers',
+                               address: "445 Long Wing Way",
+                               city: "Kitty Hawk",
+                               state:"NC",
+                               zip: "27949")
+
+      visit "/shelters/#{shelter.id}/edit"
+
+      fill_in 'shelter[name]', with: "New Heights Bird Rescue"
+      click_button 'Update Shelter'
+
+      expect(current_path).to eq("/shelters/#{shelter.id}/")
+      expect(page).to have_content('New Heights Bird Rescue')
+    end
+  end
+end
