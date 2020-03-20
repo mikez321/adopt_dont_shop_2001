@@ -11,7 +11,7 @@ RSpec.describe 'update shelter' do
 
       visit "/shelters/#{shelter.id}/edit"
 
-      fill_in 'shelter[name]', with: "New Heights Bird Rescue"
+      fill_in :name, with: "New Heights Bird Rescue"
       click_button 'Submit'
 
       expect(current_path).to eq("/shelters/#{shelter.id}/")
