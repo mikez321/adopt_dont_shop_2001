@@ -10,10 +10,9 @@ RSpec.describe "when a visitor visits pets" do
                                  state: "MA",
                                  zip: "01001")
 
-      pet1 = Pet.create(name: "Katie",
-                        age: "4",
-                        sex: "Female",
-                        shelter_id: "#{shelter_1.id}")
+      pet_1 = shelter_1.pets.create(name: "Katie",
+                                   age: "4",
+                                   sex: "Female")
       visit '/pets'
 
       expect(page).to have_content(pet1.name)
