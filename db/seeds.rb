@@ -5,7 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Pet.destroy_all
+Shelter.destroy_all
 
 shelter_1 = Shelter.create!(name: "Dog-Haven",
                            address:  "1234 Barkers Way",
@@ -13,35 +14,21 @@ shelter_1 = Shelter.create!(name: "Dog-Haven",
                            state: "MA",
                            zip: "01001")
 
-shelter_2 = Shelter.create!(name: "The Cat Palace",
-                        address: "998 Kings Ct",
-                        city: "Kings Landing",
-                        state: "CA",
-                        zip: "90210")
+shelter_2 = Shelter.create!(name: "Little King Trashmouth's Animal Rescue",
+                        address: "998 Ocean Ave",
+                        city: "Ocean Town",
+                        state: "NY",
+                        zip: "10010")
 
-shelter_4 = Shelter.create!(name: "Joe Exotic's House",
-                     address: "7785 Jay St",
-                     city: "Lakewood",
-                     state: "CO",
-                     zip: "80232")
-
-
-pet_1 = Pet.create!(name: "Charlotte",
+pet_1 = shelter_1.pets.create!(name: "Charlotte",
                    age: 13,
-                   sex: "Female",
-                   shelter_id: 1)
+                   sex: "Female")
 
-pet_2 = Pet.create!(name: "Sydney",
+
+pet_2 = shelter_1.pets.create!(name: "Sydney",
                   age: 13,
-                  sex: "Female",
-                  shelter_id: 1)
+                  sex: "Female")
 
-pet_3 = Pet.create!(name: "Josie",
+pet_3 = shelter_2.pets.create!(name: "Josie",
                  age: 4,
-                 sex: "Female",
-                 shelter_id: 2)
-
-pet_4 = Pet.create!(name: "Beef",
-                   age: 8,
-                   sex: "Male",
-                   shelter_id: 3)
+                 sex: "Female")

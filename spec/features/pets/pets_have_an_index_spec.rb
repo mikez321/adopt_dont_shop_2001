@@ -15,9 +15,9 @@ RSpec.describe "when a visitor visits pets" do
                                    sex: "Female")
       visit '/pets'
 
-      expect(page).to have_content(pet1.name)
-      expect(page).to have_content(pet1.age)
-      expect(page).to have_content(pet1.sex)
+      expect(page).to have_content(pet_1.name)
+      expect(page).to have_content(pet_1.age)
+      expect(page).to have_content(pet_1.sex)
       expect(page).to have_content(shelter_1.name)
     end
   end
