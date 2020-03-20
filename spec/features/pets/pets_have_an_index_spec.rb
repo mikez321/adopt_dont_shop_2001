@@ -19,7 +19,7 @@ RSpec.describe "when a visitor visits pets" do
       expect(page).to have_content(pet1.name)
       expect(page).to have_content(pet1.age)
       expect(page).to have_content(pet1.sex)
-      expect(page).to have_content(pet1.shelter_id)
+      expect(page).to have_content(shelter_1.name)
     end
   end
 end
