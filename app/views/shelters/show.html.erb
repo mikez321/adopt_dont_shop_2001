@@ -6,3 +6,4 @@
 <a href="/shelters/<%= @shelter.id %>/edit">Update Shelter</a>
 <%= link_to "Delete Shelter", "/shelters/#{@shelter.id}", :method => :delete %>
 <%= link_to "See Our Pets", "/shelters/#{@shelter.id}/pets" %>
+<%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new" %>
