@@ -2,3 +2,4 @@
 <h2><%= @pet.name %></h2>
 <p><%= @pet.age %></p>
 <p><%= @pet.sex %></p>
+<%= link_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %>

@@ -24,7 +24,7 @@ RSpec.describe "when i visit a pets page" do
 
       click_link "Delete Pet"
 
-      expect(current_path).to eq("/pets/index")
+      expect(current_path).to eq("/pets")
 
       expect(page).to_not have_css("img[src*='#{pet_1.image}']")
       expect(page).to_not have_content(pet_1.name)
