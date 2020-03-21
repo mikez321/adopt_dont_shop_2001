@@ -24,10 +24,13 @@ RSpec.describe "when I visit the shelter page" do
 
       click_button "Create Pet"
 
-      expect(current_path).to eq("/pets")
+      expect(current_path).to eq("/shelters/#{shelter_1.id}/pets")
 
       expect(page).to have_content("Sydney")
-      expect(page).to have_content("I love to sleep, but from 3 till 4, I'm ready to hunt! OWWWWWWWW!!!")
+      expect(page).to have_content("I love to sleep, but from 3 till 4, I'm ready to hunt! OWWWWWWWW!")
+      expect(page).to have_content("13")
+      expect(page).to have_content("Female")
+      expect(page).to have_content("Adoptable")
     end
   end
 end
