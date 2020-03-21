@@ -10,15 +10,17 @@ RSpec.describe "when a visitor visits pets" do
                                  state: "MA",
                                  zip: "01001")
 
-      pet_1 = shelter_1.pets.create(name: "Katie",
-                                   age: "4",
-                                   sex: "Female")
+      pet_1 = shelter_1.pets.create!(name: "Charlotte",
+                                     age: 13,
+                                     sex: "Female",
+                                     image: "https://raw.githubusercontent.com/mikez321/adopt_dont_shop_2001/master/app/assets/images/charlotte.jpg")
       visit '/pets'
 
       expect(page).to have_content(pet_1.name)
       expect(page).to have_content(pet_1.age)
       expect(page).to have_content(pet_1.sex)
       expect(page).to have_content(shelter_1.name)
+      expect(page).to have_css("img[src*='#{pet_1.image}']")
     end
   end
 end
