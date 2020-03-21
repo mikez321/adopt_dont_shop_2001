@@ -11,10 +11,15 @@ RSpec.describe "when I visit the shelter index page" do
                                    state: "MA",
                                    zip: "01001")
 
+        pet_1 = shelter_1.pets.create!(name: "Charlotte",
+                                       age: 13,
+                                       sex: "Female",
+                                       image: "https://raw.githubusercontent.com/mikez321/adopt_dont_shop_2001/master/app/assets/images/charlotte.jpg")
+ 
         visit "/shelters/"
 
         expect(page).to have_content("Dog-Haven")
-        expect(page).to have_content("Edit Shelter")
+        expect(page).to have_content("Delete Shelter")
 
         click_link "Delete Shelter"
 
