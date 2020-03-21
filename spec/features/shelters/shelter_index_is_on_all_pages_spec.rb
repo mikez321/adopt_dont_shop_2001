@@ -20,12 +20,22 @@ RSpec.describe "when i visit any page", type: :feature do
         click_link "Shelters Index"
           expect(current_path).to eq "/"
 
+    visit "/shelters/#{shelter_1.id}"
+      expect(page).to have_content("Shelters Index")
+        click_link "Shelters Index"
+          expect(current_path).to eq "/"
+
+    visit "/shelters/#{shelter_1.id}/pets"
+      expect(page).to have_content("Shelters Index")
+        click_link "Shelters Index"
+          expect(current_path).to eq "/"
+
     visit "/pets"
       expect(page).to have_content("Shelters Index")
         click_link "Shelters Index"
           expect(current_path).to eq "/"
 
-    visit "/shelters"
+    visit "/pets/#{pet_1.id}"
       expect(page).to have_content("Shelters Index")
         click_link "Shelters Index"
           expect(current_path).to eq "/"
