@@ -22,13 +22,16 @@ shelter_2 = Shelter.create!(name: "Little King Trashmouth's Animal Rescue",
 
 pet_1 = shelter_1.pets.create!(name: "Charlotte",
                    age: 13,
-                   sex: "Female")
+                   sex: "Female",
+                   image: "https://raw.githubusercontent.com/mikez321/adopt_dont_shop_2001/master/app/assets/images/charlotte.jpg")
 
 
 pet_2 = shelter_1.pets.create!(name: "Sydney",
                   age: 13,
-                  sex: "Female")
+                  sex: "Female",
+                  image: "https://raw.githubusercontent.com/mikez321/adopt_dont_shop_2001/master/app/assets/images/sydney.jpg")
 
-pet_3 = shelter_2.pets.create!(name: "Josie",
-                 age: 4,
-                 sex: "Female")
+pet_3 = shelter_2.pets.create!(name: "Huckleberry",
+                 age: 8,
+                 sex: "Male",
+                 image: "https://raw.githubusercontent.com/mikez321/adopt_dont_shop_2001/master/app/assets/images/hb.jpg")
