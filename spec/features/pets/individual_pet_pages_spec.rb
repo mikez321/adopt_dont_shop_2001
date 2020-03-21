@@ -1,8 +1,8 @@
- require 'rails_helper'
+require 'rails_helper'
 
- RSpec.describe "when i visit a pets page" do
-   describe "then I see the pet and their" do
-     it "image, name, description, age, sex, and adoptable status" do
+RSpec.describe "when i visit a pets page" do
+  describe "then I see the pet and their" do
+    it "image, name, description, age, sex, and adoptable status" do
 
       shelter_1 = Shelter.create(name: "Dog-Haven",
                                  address:  "1234 Barkers Way",
@@ -22,6 +22,6 @@
       expect(page).to have_content(pet_1.age)
       expect(page).to have_content(pet_1.sex)
 
-     end
-   end
- end
+    end
+  end
+end
