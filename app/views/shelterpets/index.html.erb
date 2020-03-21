@@ -7,5 +7,6 @@
   <p>Age: <%= pet.age %></p>
   <p><%= pet.sex %></p>
   <p><%= pet.description %></p>
-  <%= link_to "Edit Pet", "/pets/#{pet.id}/edit" %><br/>
+  <%= link_to "Edit Pet", "/pets/#{pet.id}/edit" %>
+  <%= link_to "Delete Pet", "/pets/#{pet.id}", method: :delete %><br/>
 <% end %>
