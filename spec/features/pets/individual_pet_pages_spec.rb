@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "when i visit a pets page" do
+RSpec.describe "when i visit a pets page", type: :feature do
   describe "then I see the pet and their" do
     it "image, name, description, age, sex, and adoptable status" do
 

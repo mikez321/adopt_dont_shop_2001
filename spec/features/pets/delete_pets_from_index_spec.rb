@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "when I visit the pets index page" do
+RSpec.describe "when I visit the pets index page", type: :feature do
   describe "next to each pet there is an 'Delete Pet' link" do
     it "when I click the link it will delete the pet" do
 

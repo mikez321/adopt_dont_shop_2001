@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "when I visit the pets index page or a shelter pets index page" do
+RSpec.describe "when I visit the pets index page or a shelter pets index page", type: :feature do
   describe "next to each pet there is an 'Edit Pet' link" do
     it "when I click the link I am taken to the pet's edit page" do
       shelter_1 = Shelter.create(name: "Dog-Haven",

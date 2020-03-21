@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'update shelter' do
+RSpec.describe 'update shelter', type: :feature do
   describe 'as a visitor when i visit a show page' do
     it 'i can edit the shelter information' do
       shelter = Shelter.create(name: 'Bird Savers',

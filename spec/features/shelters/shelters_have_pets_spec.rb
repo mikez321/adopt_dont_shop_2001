@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "when a visitor visits pets" do
+RSpec.describe "when a visitor visits pets", type: :feature do
   describe "they see each pet in the system" do
     it "Including their image, name age, sex and shelter" do
 

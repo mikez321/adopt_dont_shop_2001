@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "As a visitor when I visit a shelter page" do
+RSpec.describe "As a visitor when I visit a shelter page", type: :feature do
   describe "And I click the delete button" do
     it "i can delete the shelter" do
 

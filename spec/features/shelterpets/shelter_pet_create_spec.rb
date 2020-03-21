@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "when I visit the shelter page" do
+RSpec.describe "when I visit the shelter page", type: :feature do
   describe "and I click a link for Create Pet" do
     it "I am taken to a /new page and see a form to create a pet" do
 

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'new shelter page' do
+RSpec.describe 'new shelter page', type: :feature do
   describe 'user is able to create a new shelter' do
     it 'can create a shelter' do
 

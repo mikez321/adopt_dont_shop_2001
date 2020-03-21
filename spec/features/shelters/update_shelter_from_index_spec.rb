@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "when I visit the shelter index page" do
+RSpec.describe "when I visit the shelter index page", type: :feature do
   describe "next to each shelter there is an edit link" do
     describe "when I click the link called 'Edit Shelter'" do
       it "I am taken to the shelter's edit page and can edit the shelter" do
