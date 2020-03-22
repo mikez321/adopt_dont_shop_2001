@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "when i visit a pets page", type: :feature do
-  describe "i see a link to delete the pet and if i click the link" do
+RSpec.describe "when i visit a pets show page", type: :feature do
+  describe "i see a 'Delete Link' link to delete the pet and if i click the link" do
     it "the pet is deleted and i am returned to the pets index" do
 
       shelter_1 = Shelter.create(name: "Dog-Haven",

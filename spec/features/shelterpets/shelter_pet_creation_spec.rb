@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "when I visit the shelter page", type: :feature do
   describe "and I click a link for Create Pet" do
-    it "I am taken to a /new page and see a form to create a pet" do
+    it "I am taken to a new page and see a form to create a pet" do
 
       shelter_1 = Shelter.create(name: "Dog-Haven",
                                  address:  "1234 Barkers Way",
@@ -10,7 +10,7 @@ RSpec.describe "when I visit the shelter page", type: :feature do
                                  state: "MA",
                                  zip: "01001")
 
-      visit "/shelters/#{shelter_1.id}/"
+      visit "/shelters/#{shelter_1.id}/pets"
 
       click_link "Create Pet"
 

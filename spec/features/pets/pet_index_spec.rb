@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "when a visitor visits pets", type: :feature do
-  describe "they see each pet in the system" do
-    it "Including their image, name age, sex and shelter" do
+RSpec.describe "when a i visit /pets", type: :feature do
+  describe "i see each pet in the system" do
+    it "including their image, name age, sex and shelter" do
 
       shelter_1 = Shelter.create(name: "Dog-Haven",
                                  address:  "1234 Barkers Way",
@@ -16,11 +16,11 @@ RSpec.describe "when a visitor visits pets", type: :feature do
                                      image: "https://raw.githubusercontent.com/mikez321/adopt_dont_shop_2001/master/app/assets/images/charlotte.jpg")
       visit '/pets'
 
+      expect(page).to have_css("img[src*='#{pet_1.image}']")
       expect(page).to have_content(pet_1.name)
       expect(page).to have_content(pet_1.age)
       expect(page).to have_content(pet_1.sex)
       expect(page).to have_content(shelter_1.name)
-      expect(page).to have_css("img[src*='#{pet_1.image}']")
     end
   end
 end

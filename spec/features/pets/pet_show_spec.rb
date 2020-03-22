@@ -11,6 +11,7 @@ RSpec.describe "when i visit a pets page", type: :feature do
                                  zip: "01001")
 
       pet_1 = shelter_1.pets.create!(name: "Charlotte",
+                                     description: "I will do anything for a treat!",
                                      age: 13,
                                      sex: "Female",
                                      image: "https://raw.githubusercontent.com/mikez321/adopt_dont_shop_2001/master/app/assets/images/charlotte.jpg")
@@ -19,8 +20,10 @@ RSpec.describe "when i visit a pets page", type: :feature do
 
       expect(page).to have_css("img[src*='#{pet_1.image}']")
       expect(page).to have_content(pet_1.name)
+      expect(page).to have_content(pet_1.description)
       expect(page).to have_content(pet_1.age)
       expect(page).to have_content(pet_1.sex)
+      expect(page).to have_content(pet_1.adopt_status)
 
     end
   end

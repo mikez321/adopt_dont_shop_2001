@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "when i visits a pets page", type: :feature do
+RSpec.describe "when i visit a pets show page", type: :feature do
   describe "i see a link to update the pet called 'Update Pet'" do
     describe "when the link is clicked i can update image name description and sex" do
       it "then i click the button 'Submit' and see the pets page with updated info" do
@@ -12,6 +12,7 @@ RSpec.describe "when i visits a pets page", type: :feature do
                                    zip: "01001")
 
         pet_1 = shelter_1.pets.create!(name: "Charlotte",
+                                       description: "I will do anything for a treat!",
                                        age: 13,
                                        sex: "Female",
                                        image: "https://raw.githubusercontent.com/mikez321/adopt_dont_shop_2001/master/app/assets/images/charlotte.jpg")
