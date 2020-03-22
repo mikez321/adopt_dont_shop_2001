@@ -20,6 +20,16 @@ RSpec.describe "when I visit the shelter index page", type: :feature do
 
         expect(current_path).to eq("/shelters/#{shelter_1.id}/edit")
 
+        fill_in :name, with: "Dogtopia"
+
+        click_button "Submit"
+
+        expect(current_path).to eq("/shelters/#{shelter_1.id}/")
+
+        shelter_1.reload
+        expect(shelter_1.name).to eq('Dogtopia')
+        expect(page).to_not have_content("Dog-Haven")
+
       end
     end
   end
