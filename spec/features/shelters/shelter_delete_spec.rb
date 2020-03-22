@@ -1,21 +1,23 @@
 require 'rails_helper'
 
 RSpec.describe "As a visitor when I visit a shelter page", type: :feature do
-  describe "And I click the delete button" do
-    it "i can delete the shelter" do
+  describe "there is a link to 'Delete Shelter' " do
+    it "when I click the link the shelter is deleted and I am returned to the index" do
 
-      animal_shelter = Shelter.create(name: "Joe Exotic's House",
+      shelter = Shelter.create(name: "Joe Exotic's House",
                             address: "7785 Jay St",
                             city: "Lakewood",
                             state: "CO",
                             zip: "80232")
 
-      visit "/shelters/#{animal_shelter.id}"
+      visit "/shelters/#{shelter.id}"
+
+      expect(page).to have_link "Delete Shelter"
 
       click_link 'Delete Shelter'
 
       expect(current_path).to eq("/")
-      expect(page).to_not have_content(animal_shelter.name)
+      expect(page).to_not have_content(shelter.name)
       expect(page).to_not have_button('Delete')
 
     end
