@@ -50,6 +50,10 @@ h1 {
   padding: 15px;
 }
 
+details {
+  padding-right: 20px;
+}
+
 .shelter_block {
   background-color: gainsboro;
   margin: 30px;
@@ -71,6 +75,13 @@ h1 {
   display: inline;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.shelter_options {
+  display: inline-block;
+  float: left;
+  padding-right: 20px;
+  padding-top: 20px;
 }
 
 section {
@@ -96,7 +107,6 @@ img {
 }
 
 form {
-  padding-left:60px;
   width: 300px;
 }
 
