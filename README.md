@@ -1,3 +1,5 @@
+![](app/assets/images/Screen%20Shot%202020-08-14%20at%202.30.22%20PM.png)
+
 # Adopt Don't Shop
 Mod2, Week1 Solo Project
 
